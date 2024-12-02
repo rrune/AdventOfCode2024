@@ -1,0 +1,1 @@
+My solutions for Advent of Code 2024. Go isn't really that suited for it I guess. Limits are my abilities though.
