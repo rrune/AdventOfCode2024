@@ -1,4 +1,4 @@
-/* package main
+package main
 
 import (
 	"bufio"
@@ -128,4 +128,3 @@ func main() {
 	minScore := bfs(maze, start, end)
 	fmt.Println(minScore)
 }
-*/
