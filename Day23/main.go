@@ -128,6 +128,32 @@ func intersectSets(P map[string]bool, neighbors []string) map[string]bool {
 	return result
 }
 
+// this does work, but is just way to slow for the actual input. So I looked at actual algorithms
+/* func recFindPairs(all []string, con map[string][]string, prev []string) [][]string {
+	appended := false
+
+	res := [][]string{}
+	for _, s := range all {
+		fits := true
+		for _, t := range prev {
+			if !slices.Contains(con[s], t) {
+				fits = false
+			}
+		}
+		if fits {
+			c := make([]string, len(prev))
+			copy(c, prev)
+			res = append(res, recFindPairs(all, con, append(c, s))...)
+			appended = true
+		}
+	}
+	if !appended {
+		res = append(res, prev)
+	}
+
+	return res
+} */
+
 func readInputFile(filename string) [][2]string {
 	f, err := os.ReadFile(filename)
 	if err != nil {
